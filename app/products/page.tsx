@@ -4,8 +4,9 @@ import Link from 'next/link'
 const Products = () => {
     return (
         <div>
-            <p>All Products</p>
-            <Link href="products/1">Product 1</Link>
+            <h1>GroupDo</h1>
+            <Link href="products">Products</Link>
+            <Link href="users">Users</Link>
         </div>
     )
 }
