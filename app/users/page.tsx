@@ -1,12 +1,24 @@
 import React from 'react'
-import UserTable from './UserTable.jsx'
+import UserTable from './UserTable.tsx'
 
-const Users = async () =>  {
+interface Props {
+    searchParams: {
+        sortOrder: string
+    }
+}
+
+const Users = async ({
+    searchParams: {
+        sortOrder
+    }
+} :  Props ) =>  {
+
+    console.log("sortOrder: ", sortOrder);
 
     return (
-        <div className="p-5 my-5 bg-sky-400 text-white text-xl hover:bg-sky-500">
-            <h1>Users</h1>
+        <div className="p-5 my-5 text-white text-xl">
             <p>{new Date().toLocaleDateString()}</p>
+            <h1>Users</h1>
             <UserTable/>
         </div>
     )
